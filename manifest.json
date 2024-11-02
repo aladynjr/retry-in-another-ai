@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Retry in Another AI",
+  "name": "Retry in Another AI - Transfer conversations between ChatGPT and Claude with a single click",
   "version": "1.0",
   "description": "Retry conversations between ChatGPT and Claude with a single click - continue your chat in another AI",
   "permissions": ["storage", "tabs"],
