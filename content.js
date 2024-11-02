@@ -47,7 +47,7 @@ styleSheet.textContent = `
         align-items: center;
         gap: 6px;
         margin: 0 0 0 6px;
-        padding: 1px;
+        padding: 3px 6px;
         background-color: #1b1a16;
         color: #9a9a9a;
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -149,11 +149,11 @@ function addRetryButtonClaude(div) {
 
     // Get all Claude message divs
     const allClaudeDivs = Array.from(document.querySelectorAll('div[data-test-render-count]'));
-    // Find the index of the current div
+    // Find the index of the current div (0-based)
     const currentIndex = allClaudeDivs.indexOf(div);
     
-    // Only add button if this is not the first Claude message (index > 0)
-    if (currentIndex <= 0) return;
+    // Only add button if this is an even-numbered message (index is odd since 0-based)
+    if (currentIndex <= 0 || currentIndex % 2 === 0) return;
 
     const button = document.createElement('button');
     button.className = 'retry-button claude';
